@@ -1,0 +1,42 @@
+@-webkit-keyframes typing {
+    from { width: 0 }
+    to { width:30em }
+}
+
+@-moz-keyframes typing {
+    from { width: 0 }
+    to { width:30em }
+}
+
+@-webkit-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+@-moz-keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+}
+
+body { 
+    font-family: "Roboto Mono", monospace; 
+    background-color: #000
+}
+
+.text-container{
+    margin: 50 px;
+}
+
+h1 { 
+    font-size:100%;
+    width:30em;
+    white-space:nowrap;
+    overflow:hidden;
+    color: #fff;
+    border-right: .1em solid #fff;
+    
+    -webkit-animation: typing 10s steps(840, end), /* # of steps = # of characters */
+                        blink-caret 0.5s step-end infinite;
+    -moz-animation: typing 10s steps(840, end), /* # of steps = # of characters */
+                        blink-caret 0.5s step-end infinite;
+}
